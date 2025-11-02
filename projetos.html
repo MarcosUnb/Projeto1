@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Lista de projetos sociais e oportunidades de voluntariado."/>
+  <title>ONG Exemplo — Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo.svg" alt="Logo ONG" class="logo">
+        <span class="brand-name">ONG Exemplo</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container projects" aria-labelledby="projects-title">
+      <h1 id="projects-title">Projetos Sociais</h1>
+      <p class="lead">Conheça nossos projetos abertos para voluntariado e doação.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="images/project1.svg" alt="Projeto Educação">
+          <div class="card-body">
+            <h3>Projeto Educação</h3>
+            <p>Programa de reforço escolar para crianças em áreas rurais.</p>
+            <p><a class="btn" href="cadastro.html">Quero ser voluntário</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project2.svg" alt="Projeto Saúde">
+          <div class="card-body">
+            <h3>Projeto Saúde</h3>
+            <p>Ações de saúde preventiva e campanhas de vacinação.</p>
+            <p><a class="btn" href="cadastro.html">Quero ser voluntário</a></p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/project3.svg" alt="Projeto Meio Ambiente">
+          <div class="card-body">
+            <h3>Projeto Meio Ambiente</h3>
+            <p>Plataformas de educação ambiental e mutirões de limpeza.</p>
+            <p><a class="btn" href="cadastro.html">Quero ser voluntário</a></p>
+          </div>
+        </article>
+      </div>
+
+      <section class="donation-info" aria-labelledby="donation-title">
+        <h2 id="donation-title">Como doar</h2>
+        <p>Colabore com nossas campanhas. Doações são aplicadas com total transparência.</p>
+        <p class="donation-meta">Meta atual: <strong>R$ 25.000</strong> — Progresso: <progress value="6500" max="25000">26%</progress></p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year2"></span> ONG Exemplo — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

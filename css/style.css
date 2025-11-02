@@ -1,0 +1,129 @@
+
+/* Mobile-first, institucional clássico em tons de azul-escuro com degradê */
+:root{
+  --blue-900: #0b2545;
+  --blue-700: #12355b;
+  --blue-500: #1a6aa0;
+  --accent: #0e5a99;
+  --muted: #6b7a8a;
+  --radius: 8px;
+  --max-width: 1100px;
+  --gap: 1rem;
+  --container-padding: 1rem;
+  font-size: 16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:#10243b;
+  background: linear-gradient(180deg, #f6f9fc 0%, #f2f6fb 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+/* container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding: var(--container-padding);
+}
+
+/* header */
+.site-header{
+  background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
+  color: #fff;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(10,25,45,0.08);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--gap);
+  padding: 0.75rem 0;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  text-decoration:none;
+  color:#fff;
+}
+.logo{width:48px;height:48px;display:block}
+.brand-name{font-weight:700;font-size:1.05rem}
+.main-nav{position:relative}
+.nav-toggle{
+  background:transparent;border:1px solid rgba(255,255,255,0.12);
+  color:#fff;padding:0.4rem 0.6rem;border-radius:6px;
+  display:inline-block;
+}
+.nav-list{list-style:none;padding:0;margin:0;display:none}
+.nav-list li{margin-top:0.5rem}
+.nav-list a{color:#fff;text-decoration:none;padding:0.25rem 0.5rem;display:inline-block}
+
+/* hero */
+.hero{
+  padding:2rem 0;
+  background: linear-gradient(180deg, rgba(10,35,65,0.04), transparent);
+}
+.hero-inner{padding:1rem 0}
+.hero h1{font-size:1.4rem;margin:0 0 0.5rem;color:var(--blue-900)}
+.lead{color:var(--muted);margin-bottom:1rem}
+
+/* buttons */
+.btn{
+  display:inline-block;padding:0.55rem 0.9rem;border-radius:6px;border:0;text-decoration:none;
+  font-weight:600;
+}
+.btn.primary{background:linear-gradient(90deg,var(--blue-700),var(--blue-500));color:#fff}
+.btn.outline{background:transparent;border:1px solid var(--accent);color:var(--blue-900)}
+
+/* cards & grids */
+.cards{display:grid;gap:1rem}
+.card{background:#fff;padding:1rem;border-radius:var(--radius);box-shadow:0 6px 16px rgba(18,53,91,0.04)}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}
+.team-grid figure{background:#fff;padding:0.5rem;border-radius:6px;text-align:center;box-shadow:0 6px 14px rgba(18,53,91,0.03)}
+.team-grid img{width:100%;height:120px;object-fit:contain}
+
+/* projects grid */
+.projects-grid{display:grid;gap:1rem}
+.project-card{background:#fff;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 20px rgba(10,25,45,0.04)}
+.project-card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:1rem}
+
+/* form styles */
+form{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(10,25,45,0.04)}
+label{display:block;font-weight:600;margin-top:0.6rem}
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select{
+  width:100%;padding:0.6rem;border-radius:6px;border:1px solid #d6e1ee;margin-top:0.25rem;
+}
+fieldset{border:1px solid #e6eef8;padding:0.8rem;border-radius:8px;margin-bottom:0.8rem}
+legend{font-weight:700}
+.form-actions{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem}
+
+/* footer */
+.site-footer{margin-top:2rem;padding:1rem 0;color:#6b7a8a}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:var(--gap);flex-wrap:wrap}
+
+/* accessibility focus */
+a:focus, button:focus, input:focus {outline:3px solid rgba(26,106,160,0.18);outline-offset:2px}
+
+/* responsiveness */
+@media(min-width:600px){
+  .nav-list{display:flex;gap:1rem}
+  .nav-list li{margin:0}
+  .hero h1{font-size:1.8rem}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:1000px){
+  .hero h1{font-size:2.2rem}
+  .projects-grid{grid-template-columns:repeat(3,1fr)}
+  .container{padding:1.5rem}
+}
