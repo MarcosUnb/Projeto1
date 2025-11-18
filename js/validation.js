@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
       form.reportValidity();
       return;
     }
-    // Aqui você pode enviar por fetch para uma API ou apenas simular sucesso
+    // Possibilita enviar por fetch para uma API ou apenas simular sucesso
     const msg = document.getElementById('formMessage');
     msg.textContent = 'Cadastro enviado com sucesso! Obrigado por se inscrever.';
     msg.style.color = 'green';
